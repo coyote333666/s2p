@@ -110,7 +110,7 @@ psql -f $sourcePath'<create table script>.sql'
 echo insert $(date +%F_%R)
 # this sql script contains commands like this :
 # \copy "public"."<table name>" FROM '/<path>/<table name>.csv.utf8' DELIMITERS E'\x1F' CSV HEADER ENCODING 'UTF8' QUOTE E'\b';
-psql -f $sourcePath'<Postgresql \copy commands script for loading .csv files>.sql'
+psql -f $sourcePath'<Postgresql \copy commands script>.sql'
 
 echo create index $(date +%F_%R)
 psql -f $sourcePath'<create index script>.sql'
